@@ -11,7 +11,6 @@ import { Table } from 'react-bootstrap';
 import { DLT } from '../redux/actions/action';
 
 
-
 const Header = () => {
 
   const [totalPrice, setTotalPrice] = useState(0);
@@ -40,21 +39,17 @@ const Header = () => {
     <>
       <Navbar bg="dark" variant="dark" style={{ height: '60px', position: 'fixed', width: '100%', top: '0', zIndex: '999' }}>
         <Container>
-
           <NavLink to="/" className="text-decoration-none text-light mx-3">Add to Card</NavLink>
           <Nav className="me-auto">
             <NavLink to="/cart" className="text-decoration-none text-light">cart</NavLink>
           </Nav>
-
           <div>
             <Dropdown style={{ marginRight: '10rem' }}>
               <Dropdown.Toggle variant="" id="dropdown-basic">
                 <i class="fa-solid fa-cart-shopping text-light" style={{ fontSize: '25px', cursor: 'pointer' }}></i>
                 {(getdata.length) ? <Badge bg="secondary">{getdata.length}</Badge> : ''}
               </Dropdown.Toggle>
-
               <Dropdown.Menu>
-
                 {
                   getdata.length ?
                     <div className='card_details' style={{ width: '30rem', padding: 10 }}>
@@ -66,7 +61,6 @@ const Header = () => {
                           </tr>
                         </thead>
                         <tbody>
-
                           {
                             getdata.map((elem) => {
                               return (
@@ -90,7 +84,6 @@ const Header = () => {
                               )
                             })
                           }
-
                         </tbody>
                         <tfoot>
                           <tr>
@@ -107,15 +100,10 @@ const Header = () => {
                       <p style={{ fontSize: 22 }}>Your Card is Empty.</p>
                     </div>
                 }
-
               </Dropdown.Menu>
             </Dropdown>
-
           </div>
-
-
         </Container>
-
       </Navbar>
     </>
   )

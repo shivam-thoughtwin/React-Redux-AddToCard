@@ -26,15 +26,17 @@ const CardDetails = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate()
 
-  // Add Data
+  // Add Data - increment
   const incrementData = (elm) =>{
     dispatch(ADD(elm))
   }
 
+  // Decrement Data
   const decrimentData = (item) =>{
     dispatch(REMOVE(item))
   }
 
+  // Delete one data
   const deleteData = (id) => {
     dispatch(DLT(id))
     navigate('/');
