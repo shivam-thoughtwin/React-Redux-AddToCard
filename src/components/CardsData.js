@@ -59,4 +59,16 @@ export const Cardsdata = [
         arrimg:"https://images.unsplash.com/photo-1630409351241-e90e7f5e434d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFzc2FsYSUyMGRvc2F8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
         qunt:0
     },
+    {
+        id:6,
+        rname:"Massala Dosa5",
+        imgdata:"https://images.unsplash.com/photo-1630409351241-e90e7f5e434d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFzc2FsYSUyMGRvc2F8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        addrss:"North India, Dosa",
+        delimg:"https://images.unsplash.com/photo-1630409351241-e90e7f5e434d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFzc2FsYSUyMGRvc2F8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        domedata:" 1175 + order place from here recently",
+        price: 400,
+        rating: "2.8",
+        arrimg:"https://images.unsplash.com/photo-1630409351241-e90e7f5e434d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFzc2FsYSUyMGRvc2F8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        qunt:0
+    },
 ]

@@ -15,28 +15,26 @@ import { DLT } from '../redux/actions/action';
 const Header = () => {
 
   const [totalPrice, setTotalPrice] = useState(0);
-  console.log(totalPrice,"total")
   const getdata = useSelector((state) => state.cartreducer.carts);
-  console.log(getdata, "datafromredux");
+
 
   const dispatch = useDispatch();
 
-  const deleteData = (id) =>{
-    // console.log(id,"deleteid")
+  const deleteData = (id) => {
     dispatch(DLT(id))
   }
 
-  const total = () =>{
+  const total = () => {
     let tprice = 0;
-    getdata.map((elem,key)=>{
+    getdata.map((elem, key) => {
       tprice = elem.price * elem.qunt + tprice
     })
     setTotalPrice(tprice);
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     total();
-  },[total])
+  }, [total])
 
   return (
     <>
@@ -52,9 +50,9 @@ const Header = () => {
             <Dropdown style={{ marginRight: '10rem' }}>
               <Dropdown.Toggle variant="" id="dropdown-basic">
                 <i class="fa-solid fa-cart-shopping text-light" style={{ fontSize: '25px', cursor: 'pointer' }}></i>
-                { (getdata.length) ?  <Badge bg="secondary">{getdata.length}</Badge> : '' }
+                {(getdata.length) ? <Badge bg="secondary">{getdata.length}</Badge> : ''}
               </Dropdown.Toggle>
-              
+
               <Dropdown.Menu>
 
                 {
@@ -83,7 +81,7 @@ const Header = () => {
                                       <p>Quantity: {elem.qunt}</p>
                                     </td>
                                     <td>
-                                      <p onClick={()=> deleteData(elem.id)}>
+                                      <p onClick={() => deleteData(elem.id)}>
                                         <i className='fas fa-trash'></i>
                                       </p>
                                     </td>
@@ -92,8 +90,15 @@ const Header = () => {
                               )
                             })
                           }
-                          <p className='text-center mt-3'>Total: <strong> ₹{totalPrice}</strong></p>
+
                         </tbody>
+                        <tfoot>
+                          <tr>
+                            <td>
+                              <p className='text-center mt-3'>Total: <strong> ₹{totalPrice}</strong></p>
+                            </td>
+                          </tr>
+                        </tfoot>
                       </Table>
                     </div>
                     :
